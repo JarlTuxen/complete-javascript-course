@@ -118,24 +118,26 @@
 //         console.log('Invalid day!');
 // }
 
-const day = 'sunday';
-if (day === 'monday') {
-    console.log('Plan');
-    console.log('Meetup');
-} else if (day === 'tuesday') {
-    console.log('Prepare');
-} else if (day === 'wednesday' || day === 'thursday') {
-    console.log('Code');
-} else if (day === 'friday') {
-    console.log('Test');
-} else if (day === 'saturday' || day === 'sunday') {
-    console.log('Weekend');
-} else {
-    console.log('Invalid day!');
-}
+// const day = 'sunday';
+// if (day === 'monday') {
+//     console.log('Plan');
+//     console.log('Meetup');
+// } else if (day === 'tuesday') {
+//     console.log('Prepare');
+// } else if (day === 'wednesday' || day === 'thursday') {
+//     console.log('Code');
+// } else if (day === 'friday') {
+//     console.log('Test');
+// } else if (day === 'saturday' || day === 'sunday') {
+//     console.log('Weekend');
+// } else {
+//     console.log('Invalid day!');
+// }
 
 //Coding challenge 4
 
 const bill = 430;
+//ternary operator
 const tip = (50 <= bill && bill <= 300) ? bill * 0.15 : bill * 0.2;
+//template literal / template string
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
