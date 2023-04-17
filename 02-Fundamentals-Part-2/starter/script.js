@@ -171,13 +171,13 @@ const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(bills, tips, totals); */
 
 // objects
-const jonas = {
+/* const jonas = {
     firstName: 'Jonas',
     lastName: 'Schmedtmann',
     age: 2037 - 1991,
     job: 'teacher',
     friends: ['Michael', 'Peter', 'Steven']
-};
+}; */
 /* console.log(jonas);
 console.log(`${jonas.firstName} ${jonas['lastName']}`); */
 
@@ -201,5 +201,40 @@ console.log(jonas); */
 
 // Challenge
 // "Jonas has 3 friends, and his best friend is called Michael"
-console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+/* console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`); */
 
+/* // Coding Challenge #3
+// Calculate BMI
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    //calcBMI: (m, h) => m / h ** 2
+    // calcBMI: () => this.mass / this.height ** 2
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+};
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    //calcBMI: (m, h) => m / h ** 2
+    //calcBMI: () => this.mass / this.height ** 2
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+}
+
+// mark.bmi = mark.calcBMI(mark.mass, mark.height);
+// john.bmi = john.calcBMI(john.mass, john.height);
+mark.bmi = mark.calcBMI();
+john.bmi = john.calcBMI();
+
+if (mark.bmi > john.bmi) {
+    console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s BMI (${john.bmi})`);
+} else if (mark.bmi < john.bmi) {
+    console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`);
+}; */
