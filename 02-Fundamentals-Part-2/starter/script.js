@@ -286,3 +286,65 @@ for (let i = 0; i < jonasArray.length; i++) {
     if (typeof jonasArray[i] == 'number') break;
     console.log(jonasArray[i], typeof jonasArray[i]);
 } */
+
+// reverse loop
+/* const jonasArray = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven']
+];
+for (let i = jonasArray.length - 1; i >= 0; i--) {
+    console.log(jonasArray[i]);
+} */
+
+/* // loop in loop
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`--- Starting exercise ${exercise} ---`);
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Doing repetition ${exercise}-${rep}`);
+    }
+} */
+
+// while loop
+/* for (let rep = 1; rep <= 10; rep++) {
+    console.log(`FOR: Lifting weights repetition ${rep}`);
+}
+
+let rep = 1;
+while (rep <= 10) {
+    console.log(`WHILE: Lifting weights repetition ${rep}`);
+    rep++;
+} */
+
+/* let dice = Math.trunc(Math.random() * 6) + 1;
+if (dice == 6) console.log(`You rolled ${dice}`);
+while (dice !== 6) {
+    console.log(`You rolled ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice == 6) console.log(`You rolled ${dice}`);
+} */
+
+
+// Coding Challenge #4
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tip = [];
+const totals = [];
+const calcTip = bill => 50 < bill && bill < 300 ? bill * 0.15 : bill * 0.20;
+
+// calculate tip and total = bill + tip
+for (let i = 0; i < bills.length; i++) {
+    tip.push(calcTip(bills[i]));
+    totals.push(bills[i] + tip[i]);
+    console.log(bills[i], tip[i], totals[i]);
+}
+// bonus - average of array
+const calcAverage = function (arr) {
+    let total = 0;
+    for (let i = 0; i < arr.length; i++) {
+        total += arr[i];
+    }
+    return total / arr.length;
+}
+console.log(calcAverage(totals));
