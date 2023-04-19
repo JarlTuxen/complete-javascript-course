@@ -56,3 +56,31 @@ console.log(`Temperature amplitude is ${temperatureAmplitude}`);
 console.log(
   `Exercise temperature amplitude is ${calcTempAmplitude2(temperatures)}`
 );
+
+// Function should now receive 2 arrays of temperatures
+
+// merge arrays and reuse the calcTempAmplitude
+// const newArray = array1.concat(array2);
+
+const calcTempAmplitudeNew = function (temps1, temps2) {
+  const temps = temps1.concat(temps2);
+
+  let max = temps[0];
+  let min = temps[0];
+
+  for (let i = 1; i < temps.length; i++) {
+    const temp = temps[i];
+    if (typeof temp !== 'number') continue;
+    if (temp > max) max = temp;
+    if (temp < min) min = temp;
+  }
+  return max - min;
+};
+
+const tempExtra = [30, -10];
+console.log(
+  `Exercise temperature amplitude is ${calcTempAmplitudeNew(
+    temperatures,
+    tempExtra
+  )}`
+);
