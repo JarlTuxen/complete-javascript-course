@@ -20,7 +20,7 @@ const temperatures = [3, -1, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 // find min temp
 // calculate temperature amplitude by doing diff
 
-const calcTempAmplitude = function (temps) {
+/* const calcTempAmplitude = function (temps) {
   const cleanTemps = [];
   for (let i = 0; i < temps.length; i++) {
     if (temps[i] !== 'error') cleanTemps.push(temps[i]);
@@ -83,4 +83,22 @@ console.log(
     temperatures,
     tempExtra
   )}`
-);
+); */
+
+const measureKelvin = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'celcius',
+    value: Number(prompt('Degrees celsius')),
+  };
+
+  console.table(measurement);
+
+  // console.log(measurement.value);
+  // console.warn(measurement.value);
+  // console.error(measurement.value);
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+
+console.log(measureKelvin());
