@@ -4,7 +4,7 @@
 // don't count in errors
 // calculate temperature amplitude
 
-const temperatures = [3, -1, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+// const temperatures = [3, -1, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 
 // what is temperature amplitude?
 // diff between highest and lowest in array
@@ -85,11 +85,11 @@ console.log(
   )}`
 ); */
 
-const measureKelvin = function () {
+/* const measureKelvin = function () {
   const measurement = {
     type: 'temp',
     unit: 'celcius',
-    value: Number(prompt('Degrees celsius')),
+    value: 10,
   };
 
   console.table(measurement);
@@ -101,4 +101,48 @@ const measureKelvin = function () {
   return kelvin;
 };
 
-console.log(measureKelvin());
+console.log(measureKelvin()); */
+
+/*   const calcTempAmplitudeBug = function (temps1, temps2) {
+  const temps = temps1.concat(temps2);
+  console.log(temps);
+
+  let max = temps[0];
+  let min = temps[0];
+
+  for (let i = 1; i < temps.length; i++) {
+    const temp = temps[i];
+    if (typeof temp !== 'number') continue;
+
+    //debugger;
+    if (temp > max) max = temp;
+    if (temp < min) min = temp;
+  }
+  console.log(max, min);
+  return max - min;
+};
+
+const amplitudeBug = calcTempAmplitudeBug([3, 5, 1], [9, 4, 5]);
+console.log(amplitudeBug); */
+
+// Coding Challenge #1
+//[17, 21, 23]
+//print
+//"... 17°C in 1 days ... 21°C in 2 days ... 23°C in 3 days ..."
+//testdata 1: [17, 21, 23]
+//testdata 2: [12, 5, -5, 0, 4]
+
+const printForecast = function (temps) {
+  let tempTxt = '...';
+
+  //loop through and add ' 17°C in 1 days ...'
+  for (let i = 0; i < temps.length; i++) {
+    tempTxt += ` ${temps[i]}°C in ${i + 1} days ...`;
+  }
+
+  console.log(tempTxt);
+};
+const testdata1 = [17, 21, 23];
+printForecast(testdata1);
+const testdata2 = [12, 5, -5, 0, 4];
+printForecast(testdata2);
